@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import static com.example.FizzBuzz.FIZZ;
 import static com.example.FizzBuzz.BUZZ;
 import static com.example.FizzBuzz.FIZZBUZZ;
+import static com.example.FizzBuzz.ALFRESCO;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
@@ -18,8 +19,8 @@ public class FizzBuzzTest {
 
     @Test
     void testFizzOutput() {
-        assertEquals(FIZZ, FizzBuzz.solve(-3));
-        assertEquals(FIZZ, FizzBuzz.solve(3));
+        assertEquals(FIZZ, FizzBuzz.solve(-6));
+        assertEquals(FIZZ, FizzBuzz.solve(6));
         assertEquals(FIZZ, FizzBuzz.solve(99));
     }
 
@@ -39,9 +40,17 @@ public class FizzBuzzTest {
     }
 
     @Test
+    void testAlfrescoOutput() {
+        assertEquals(ALFRESCO, FizzBuzz.solve(-3));
+        assertEquals(ALFRESCO, FizzBuzz.solve(13));
+        assertEquals(ALFRESCO, FizzBuzz.solve(333));
+        assertEquals(ALFRESCO, FizzBuzz.solve(2563));
+    }
+
+    @Test
     void testFizzBuzzRange() {
         String nominalOutput = FizzBuzz.solveRange(1, 20);
-        assertEquals("1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz", nominalOutput);
+        assertEquals("1 2 alfresco 4 buzz fizz 7 8 fizz buzz 11 fizz alfresco 14 fizzbuzz 16 17 fizz 19 buzz", nominalOutput);
         String emptyOutput = FizzBuzz.solveRange(20, 19);
         assertEquals("", emptyOutput);
     }

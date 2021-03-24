@@ -5,9 +5,13 @@ public class FizzBuzz {
     public static final String FIZZ = "fizz";
     public static final String BUZZ = "buzz";
     public static final String FIZZBUZZ = "fizzbuzz";
+    public static final String ALFRESCO = "alfresco";
 
     public static String solve(int n) {
 
+        if(NumberUtils.numberContains3(n)){
+            return ALFRESCO;
+        }
         if (n % 3 == 0 && n % 5 == 0) {
             return FIZZBUZZ;
         }

@@ -2,7 +2,9 @@ package com.example;
 
 import org.junit.jupiter.api.Test;
 
-import static com.example.FizzBuzz.*;
+import static com.example.FizzBuzz.FIZZ;
+import static com.example.FizzBuzz.BUZZ;
+import static com.example.FizzBuzz.FIZZBUZZ;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {

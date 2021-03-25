@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FizzBuzz test</title>
+    <style>
+        * {
+            font-family: Inter;
+        }
+
+        .content-wrapper {
+            margin: 50px;
+        }
+
+        label, input {
+            display: block;
+        }
+
+        .half {
+            display: inline-block;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+<div class="content-wrapper">
+    <h3>FizzBuzz</h3>
+    <div id="input-area">
+        <div class="half">
+            <label for="fizz-buzz-range-start">range start:</label>
+            <input class="fizz-buzz-input" id="fizz-buzz-range-start" name="start" type="number" value="0"/>
+        </div>
+        <div class="half">
+            <label for="fizz-buzz-range-finish">range finish:</label>
+            <input class="fizz-buzz-input" id="fizz-buzz-range-finish" name="finish" type="number" value="0"/>
+        </div>
+    </div>
+</div>
+<div class="content-wrapper">
+    <div id="fizz-buzz-output-area">
+        output will be visible here
+    </div>
+</div>
+<script type="text/javascript" charset="UTF-8" src="js/FizzBuzz.js"></script>
+<script type="text/javascript">
+    FizzBuzz.bindFizzBuzz();
+</script>
+</body>
+</html>

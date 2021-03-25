@@ -1,12 +1,11 @@
 package com.example;
 
-import org.junit.jupiter.api.Test;
-
-import static com.example.FizzBuzz.FIZZ;
-import static com.example.FizzBuzz.BUZZ;
-import static com.example.FizzBuzz.FIZZBUZZ;
 import static com.example.FizzBuzz.ALFRESCO;
+import static com.example.FizzBuzz.BUZZ;
+import static com.example.FizzBuzz.FIZZ;
+import static com.example.FizzBuzz.FIZZBUZZ;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {
 
@@ -48,15 +47,19 @@ public class FizzBuzzTest {
     }
 
     @Test
-    void testNominalFizzBuzzRange() {
+    void testFizzBuzzRangeWithCorrectInput() {
         String nominalOutput = FizzBuzz.solveRange(1, 20);
         assertEquals("1 2 alfresco 4 buzz fizz 7 8 fizz buzz 11 fizz alfresco 14 fizzbuzz 16 17 fizz 19 buzz", nominalOutput);
+    }
+
+    @Test
+    void testFizzBuzzRangeWithIncorrectInput() {
         String emptyOutput = FizzBuzz.solveRange(20, 19);
         assertEquals("", emptyOutput);
     }
 
     @Test
-    void testFizzBuzzReporting() {
+    void testFizzBuzzReportingWithCorrectInput() {
         FizzBuzzReport fizzBuzzReport = new FizzBuzzReport();
         String nominalOutput = FizzBuzz.solveRange(1, 20, fizzBuzzReport);
         assertEquals("1 2 alfresco 4 buzz fizz 7 8 fizz buzz 11 fizz alfresco 14 fizzbuzz 16 17 fizz 19 buzz", nominalOutput);
@@ -68,4 +71,20 @@ public class FizzBuzzTest {
         assertEquals(1, fizzBuzzReport.getNrOccurrences("fizzbuzz"));
         assertEquals(10, fizzBuzzReport.getNrOccurrences("integer"));
     }
+
+    @Test
+    void testFizzBuzzReportingWithIncorrectInput() {
+        FizzBuzzReport fizzBuzzReport = new FizzBuzzReport();
+        String emptyOutput = FizzBuzz.solveRange(20, 19, fizzBuzzReport);
+        assertEquals("", emptyOutput);
+        assertEquals("", fizzBuzzReport.getReportDataInReadableFormat());
+
+        assertEquals(0, fizzBuzzReport.getNrOccurrences("fizz"));
+        assertEquals(0, fizzBuzzReport.getNrOccurrences("buzz"));
+        assertEquals(0, fizzBuzzReport.getNrOccurrences("alfresco"));
+        assertEquals(0, fizzBuzzReport.getNrOccurrences("fizzbuzz"));
+        assertEquals(0, fizzBuzzReport.getNrOccurrences("integer"));
+    }
+
+
 }

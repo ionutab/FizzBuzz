@@ -102,3 +102,4 @@ buildNumber.properties
 ### EXTRA ###
 .idea/.gitignore
 .idea/vcs.xml
+.idea/.name

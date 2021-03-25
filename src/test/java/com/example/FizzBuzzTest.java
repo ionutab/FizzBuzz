@@ -1,10 +1,12 @@
 package com.example;
 
-import static com.example.FizzBuzz.ALFRESCO;
-import static com.example.FizzBuzz.BUZZ;
-import static com.example.FizzBuzz.FIZZ;
-import static com.example.FizzBuzz.FIZZBUZZ;
+import static com.example.algorithm.FizzBuzz.ALFRESCO;
+import static com.example.algorithm.FizzBuzz.BUZZ;
+import static com.example.algorithm.FizzBuzz.FIZZ;
+import static com.example.algorithm.FizzBuzz.FIZZBUZZ;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import com.example.algorithm.FizzBuzz;
+import com.example.algorithm.FizzBuzzReport;
 import org.junit.jupiter.api.Test;
 
 public class FizzBuzzTest {

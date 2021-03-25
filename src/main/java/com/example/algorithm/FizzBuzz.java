@@ -1,4 +1,6 @@
-package com.example;
+package com.example.algorithm;
+
+import com.example.NumberUtils;
 
 public class FizzBuzz {
 

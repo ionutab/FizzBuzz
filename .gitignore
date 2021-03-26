@@ -103,3 +103,5 @@ buildNumber.properties
 .idea/.gitignore
 .idea/vcs.xml
 .idea/.name
+.idea/encodings.xml
+.idea/sonarlint/issuestore/index.pb
